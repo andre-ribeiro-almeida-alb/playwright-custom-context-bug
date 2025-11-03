@@ -8,10 +8,17 @@ test('misleading error message', async ({ customPage }) => {
 });
 
 
-test('fails correctly', async ({ customPage }) => {
+test('fails correctly with expect', async ({ customPage }) => {
   await customPage.goto('https://playwright.dev/');
 
   const potatoButton = customPage.getByRole("button", { name: "Potato" });
 
   expect(potatoButton).toBeVisible();
+});
+
+
+test('fails correctly with default context/page', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  await page.getByRole("button", { name: "Potato" }).click();
 });
