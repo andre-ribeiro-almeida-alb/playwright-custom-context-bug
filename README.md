@@ -1,5 +1,7 @@
 # Playwright Bug: Misleading Error Message
 
+**Note**: Fixed in this branch. See https://github.com/microsoft/playwright/issues/38100
+
 This repository contains a **minimal reproducible example** demonstrating a **misleading error message** in Playwright.
 
 The test titled **“misleading error message”** intentionally triggers the problematic scenario.
