@@ -10,7 +10,7 @@ export const test = base.extend<{ customPage: Page }>({
 
         await use(page);
 
-        await context.close();
+        await context.close({ reason: "Test ended." });
 
     }
 
