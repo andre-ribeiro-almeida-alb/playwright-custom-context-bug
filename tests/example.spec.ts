@@ -13,7 +13,7 @@ test('fails correctly with expect', async ({ customPage }) => {
 
   const potatoButton = customPage.getByRole("button", { name: "Potato" });
 
-  expect(potatoButton).toBeVisible();
+  await expect(potatoButton).toBeVisible();
 });
 
 
